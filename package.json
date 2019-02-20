@@ -1,11 +1,11 @@
 {
   "name": "angular-builder-custom-terser-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular builder that allows Terser (Uglify) customization",
   "main": "dist/index.js",
   "builders": "builders.json",
   "scripts": {
-    "compile": "npx rimraf ./dist && npx tsc -p ./tsconfig.prod.json & npx copyfiles ./src/**/*.json dist",
+    "compile": "npx rimraf ./dist && npx tsc -p ./tsconfig.prod.json && npx copyfiles ./src/**/*.json dist",
     "lint": "npx tsc -p ./tsconfig.json --noEmit && npx tslint -c ./tslint.json -p ./tsconfig.json",
     "prepack": "npm run compile"
   },
