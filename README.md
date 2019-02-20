@@ -1,16 +1,13 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
-- [angular-builder-custom-terser-options](#angular-builder-custom-terser-options)
-  - [Quick start](#quick-start)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # angular-builder-custom-terser-options
 
 **PLEASE UPVOTE [THIS ISSUE](https://github.com/angular/angular-cli/issues/3861) TO BRING TERSER (UGLIFY) CUSTOMIZATION INTO ANGULAR'S DEFAULT BUILDER!!!**
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Quick start](#quick-start)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Quick start
 
