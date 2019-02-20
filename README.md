@@ -26,7 +26,7 @@ Custom Angular builder that allows Terser (Uglify) customization. It's a sub-cla
    1. Set `projects.yourProjectName.architect.build.configurations.production.terserOptions` to an object with any minify options supported by Terser. You can find the list of available options [here](https://github.com/terser-js/terser#minify-options).
    1. Set `projects.yourProjectName.architect.serve` to `angular-builder-custom-terser-options:dev-server-custom-terser`
 
-   ```json
+   ```js
    {
      // ... rest of the default config ,
      "projects": {
