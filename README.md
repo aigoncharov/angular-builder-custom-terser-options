@@ -8,6 +8,8 @@ Custom Angular builder that allows Terser (Uglify) customization. It's a sub-cla
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Quick start](#quick-start)
+- [Common use-cases](#common-use-cases)
+  - [Keep class names](#keep-class-names)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -59,3 +61,10 @@ Custom Angular builder that allows Terser (Uglify) customization. It's a sub-cla
      }
    }
    ```
+
+## Common use-cases
+
+### Keep class names
+
+If you set `target` in your tsconfig.json to `es6` or higher, set your `terserOptions` to `{ "keep_classnames": true }`.
+If you set `target` in your tsconfig.json to `es5`, set your `terserOptions` to `{ "keep_fnames": true }`.
