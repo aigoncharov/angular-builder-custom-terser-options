@@ -1,27 +1,8 @@
-import { BrowserBuilder } from '@angular-devkit/build-angular'
-import TerserPlugin = require('terser-webpack-plugin')
+import { createBuilder } from '@angular-devkit/architect'
+import { executeBrowserBuilder } from '@angular-devkit/build-angular'
+import { Schema as BrowserBuilderSchema } from '@angular-devkit/build-angular/src/browser/schema'
+import { json } from '@angular-devkit/core'
 
-export default class CustomizeTerserBrowserBuilder extends BrowserBuilder {
-  public buildWebpackConfig(root: any, projectRoot: any, host: any, options: any) {
-    const terserOptionsCustom = options.terserOptions
-    const webpackConfig = super.buildWebpackConfig(root, projectRoot, host, options)
-    if (
-      terserOptionsCustom &&
-      webpackConfig.optimization &&
-      webpackConfig.optimization.minimizer &&
-      Array.isArray(webpackConfig.optimization.minimizer)
-    ) {
-      const terserPlugin = (webpackConfig.optimization.minimizer as any[]).find(
-        (minimizer) => minimizer instanceof TerserPlugin,
-      )
-      if (terserPlugin) {
-        const terserOptionsOriginal = terserPlugin.options.terserOptions
-        terserPlugin.options.terserOptions = {
-          ...terserOptionsOriginal,
-          ...terserOptionsCustom,
-        }
-      }
-    }
-    return webpackConfig
-  }
-}
+import { decorateBuilder } from '../common'
+
+export default createBuilder<json.JsonObject & BrowserBuilderSchema>(decorateBuilder(executeBrowserBuilder))

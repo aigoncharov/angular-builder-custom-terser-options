@@ -1,11 +1,8 @@
-import { DevServerBuilder } from '@angular-devkit/build-angular'
+import { createBuilder } from '@angular-devkit/architect'
+import { executeDevServerBuilder } from '@angular-devkit/build-angular'
+import { Schema as DevServerBuilderSchema } from '@angular-devkit/build-angular/src/dev-server/schema'
+import { json } from '@angular-devkit/core'
 
-import BrowserBuilder from '../browser'
+import { decorateBuilder } from '../common'
 
-export default class CustomizeTerserDevServerBuilder extends DevServerBuilder {
-  public buildWebpackConfig(root: any, projectRoot: any, host: any, options: any) {
-    const browserBuilder = new BrowserBuilder(this.context)
-    const webpackConfig = browserBuilder.buildWebpackConfig(root, projectRoot, host, options)
-    return webpackConfig
-  }
-}
+export default createBuilder<json.JsonObject & DevServerBuilderSchema>(decorateBuilder(executeDevServerBuilder))
