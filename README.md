@@ -2,6 +2,8 @@
 
 Custom Angular builder that allows Terser (Uglify) customization. It's a sub-class of Angular's default builder and it does a very small customization of its logic by extending final webpack config with your custom options for Terser.
 
+**This project is not maintained. Try https://github.com/just-jeb/angular-builders instead**
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
