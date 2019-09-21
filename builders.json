@@ -1,12 +1,12 @@
 {
   "builders": {
     "browser-custom-terser": {
-      "class": "./dist/src/browser",
+      "implementation": "./dist/src/browser",
       "schema": "./dist/src/browser/schema.json",
       "description": "Build a browser app with customized Terser options."
     },
     "dev-server-custom-terser": {
-      "class": "./dist/src/dev-server",
+      "implementation": "./dist/src/dev-server",
       "schema": "./dist/src/dev-server/schema.json",
       "description": "Dev server with customized Terser options."
     }

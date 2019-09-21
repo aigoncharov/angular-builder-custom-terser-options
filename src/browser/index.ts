@@ -5,4 +5,5 @@ import { json } from '@angular-devkit/core'
 
 import { decorateBuilder } from '../common'
 
+export * from '@angular-devkit/build-angular/src/browser'
 export default createBuilder<json.JsonObject & BrowserBuilderSchema>(decorateBuilder(executeBrowserBuilder))
