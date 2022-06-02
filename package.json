@@ -25,7 +25,7 @@
     "@angular-devkit/core": "^8.2.2",
     "@angular/compiler": "^8.2.2",
     "@angular/compiler-cli": "^8.2.2",
-    "@angular/core": "^8.2.2",
+    "@angular/core": "^11.0.5",
     "@types/karma": "^3.0.3",
     "@types/terser-webpack-plugin": "^1.2.1",
     "@types/webpack-dev-server": "^3.1.2",
@@ -48,7 +48,7 @@
     "@angular-devkit/core": "^0.802.2",
     "@angular/compiler-cli": "^8.2.2",
     "@angular/compiler": "^8.2.2",
-    "@angular/core": "^8.2.2",
+    "@angular/core": "^11.0.5",
     "terser-webpack-plugin": "^1.2.2"
   }
 }
